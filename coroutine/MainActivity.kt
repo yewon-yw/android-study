@@ -22,18 +22,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    suspend fun nonSuspendTask1() {
-        delay(3000)
+    fun nonSuspendTask1() {
+        Thread.sleep(3000)
         Log.d("TAG", "[nonSuspendTask1] After 3s in (${Thread.currentThread().name})")
-        delay(3000)
+        Thread.sleep(3000)
         Log.d("TAG", "[nonSuspendTask1] After 6s in (${Thread.currentThread().name})")
 
         Log.d("TAG", "[nonSuspendTask1] END in (${Thread.currentThread().name}) *****")
     }
-    suspend fun nonSuspendTask2() {
-        delay(3000)
+    fun nonSuspendTask2() {
+        Thread.sleep(1000)
         Log.d("TAG", "[nonSuspendTask2] After 1s in (${Thread.currentThread().name})")
-        delay(3000)
+        Thread.sleep(3000)
         Log.d("TAG", "[nonSuspendTask2] After 4s in (${Thread.currentThread().name})")
 
         Log.d("TAG", "[nonSuspendTask2] END in (${Thread.currentThread().name})*****")
